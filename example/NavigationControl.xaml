@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="MyNamespace.NavigationControl"
+    xmlns:local="clr-namespace:MyNamespace;assembly=MyProject">
+    <ContentView.Content>
+        <Grid Padding="3" ColumnSpacing="3" BackgroundColor="Teal">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <local:Tab
+                x:Class="MyNamespace.Tab"
+                Status="1"
+                NavPage="MyNamespace.HomePage"
+                BackgroundColor="White"
+                ActiveBackgroundColor="#008080"
+                ActiveTextColor="#FFFFFF"
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="Center"
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Text="Home" />
+            <local:Tab 
+                x:Class="MyNamespace.Tab"
+                Status="0"
+                NavPage="MyNamespace.ProfilePage"
+                ActiveBackgroundColor="#008080"
+                ActiveTextColor="#FFFFFF"
+                BackgroundColor="White"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Grid.Row="0" 
+                Grid.Column="1" 
+                Text="Profile" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>
